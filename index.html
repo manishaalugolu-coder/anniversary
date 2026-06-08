@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary Mom & Dad ❤️</title>
+    <link rel="stylesheet" href="anniversary_style.css">
+</head>
+<body>
+    <div id="lock-screen">
+    <div class="lock-box">
+        <h2>❤️ Special Access ❤️</h2>
+        <p>Enter the secret phrase to continue</p>
+
+        <input
+            type="text"
+            id="passwordInput"
+            placeholder="Type here...">
+
+        <button onclick="checkPassword()">Open ❤️</button>
+
+        <p id="error-msg"></p>
+    </div>
+</div>
+
+<div id="website-content" style="display:none;">
+
+    <!-- Hero Section -->
+    <header class="hero">
+    
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h3>Celebrating Love & Togetherness</h3>
+            <h1>Happy Anniversary</h1>
+            <h2>Dear Amma & Daddy ❤️</h2>
+            <p>
+                Your story is the foundation of our family,
+                a story of sacrifice, friendship, laughter, and endless love.
+            </p>
+        </div>
+    </header>
+           <section class="counter-section">
+    <h2>❤️ Together Since</h2>
+
+    <div class="counter-box">
+        <div class="counter-item">
+            <span id="years">0</span>
+            <p>Years</p>
+        </div>
+
+        <div class="counter-item">
+            <span id="months">0</span>
+            <p>Months</p>
+        </div>
+
+        <div class="counter-item">
+            <span id="days">0</span>
+            <p>Days</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    const weddingDate = new Date("2003-06-11"); // Change to your parents' wedding date
+
+    function updateCounter() {
+        const today = new Date();
+
+        let years = today.getFullYear() - weddingDate.getFullYear();
+        let months = today.getMonth() - weddingDate.getMonth();
+        let days = today.getDate() - weddingDate.getDate();
+
+        if (days < 0) {
+            months--;
+            const lastMonth = new Date(
+                today.getFullYear(),
+                today.getMonth(),
+                0
+            ).getDate();
+
+            days += lastMonth;
+        }
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        document.getElementById("years").textContent = years;
+        document.getElementById("months").textContent = months;
+        document.getElementById("days").textContent = days;
+    }
+
+    updateCounter();
+    setInterval(updateCounter, 1000);
+    
+    </script>
+    <!-- Gallery -->
+    <section class="gallery-section">
+        <h2>📸 Precious Memories</h2>
+
+        <div class="gallery">
+            <img src="images/img_1.jpg" alt="">
+            <img src="images/img_3.jpg" alt="">
+            <img src="images/img_6.jpg" alt="">
+            <img src="images/img_7.jpg" alt="">
+            <img src="images/img_8.jpg" alt="">
+            <img src="images/img_9.jpg" alt="">
+            <img src="images/img_fam.jpg" alt="">
+            <img src="images/img_now.jpg" alt="">
+
+        </div>
+    </section>
+<section class="comparison-section">
+
+    <h2>⏳ Then   Now ❤️</h2>
+    <p class="comparison-text">
+        A beautiful journey from then to now.
+    </p>
+
+    <div class="comparison-container">
+
+        <img
+            src="images/img_now.jpg"
+            alt="Now"
+            class="comparison-image">
+
+        <div class="comparison-overlay" id="overlay">
+            <img
+                src="images/img_5_old.jpg"
+                alt="Then"
+                class="comparison-image">
+        </div>
+
+        <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="slider"
+            id="slider">
+
+    </div>
+
+
+</section>
+<section class="family-tree-section">
+    <h2>🌳 Our Family Tree</h2>
+
+    <div class="tree">
+
+        <div class="parents">
+            <div class="member parent">
+                <img src="images/img_daddy.png" alt="Dad">
+                <h3>Daddy</h3>
+            </div>
+
+            <div class="heart-node">❤️</div>
+
+            <div class="member parent">
+                <img src="images/img_amma_1.jpg" alt="Mom">
+                <h3>Amma</h3>
+            </div>
+        </div>
+
+        <div class="vertical-line"></div>
+
+       <div class="children">
+
+    <div class="member child">
+        <img src="images/img_pandu_2.jpg" alt="Child 1">
+        <h3>Pandu</h3>
+    </div>
+
+    <div class="member child">
+        <img src="images/img_nani_1.jpg" alt="Child 2">
+        <h3>Nani</h3>
+    </div>
+
+    </div>
+</section>
+<!-- Reasons We Love You -->
+<section class="love-reasons">
+
+    <h2>❤️ మేము మిమ్మల్ని ప్రేమించే కారణాలు ❤️</h2>
+
+    <div class="reasons-grid">
+
+        <div class="reason-card">
+            <span>💖</span>
+            <h3>నిస్వార్థ ప్రేమ</h3>
+            <p>మీరు ఎల్లప్పుడూ మమ్మల్ని ప్రేమించి, ప్రతి పరిస్థితిలో మా వెంటే నిలిచారు.</p>
+        </div>
+
+        <div class="reason-card">
+            <span>🌟</span>
+            <h3>మీ త్యాగాలు</h3>
+            <p>మా భవిష్యత్తు బాగుండాలని మీరు ఎన్నో కష్టాలు పడి, ఎన్నో త్యాగాలు చేశారు.</p>
+        </div>
+
+        <div class="reason-card">
+            <span>💪</span>
+            <h3>మీ బలం</h3>
+            <p>జీవితంలో ఎలాంటి కష్టమైనా ధైర్యంగా ఎదుర్కోవాలని మీరు మాకు నేర్పించారు.</p>
+        </div>
+
+        <div class="reason-card">
+            <span>😊</span>
+            <h3>మీ చిరునవ్వులు</h3>
+            <p>మీ ఆనందమే మా జీవితంలో అతిపెద్ద ఆశీర్వాదం.</p>
+        </div>
+
+        <div class="reason-card">
+            <span>❤️</span>
+            <h3>అత్యుత్తమ తల్లిదండ్రులు</h3>
+            <p>మీలాంటి తల్లిదండ్రులు మాకు దొరకడం మా అదృష్టం.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Letter to Mom and Dad -->
+<section class="letter-section">
+
+    <div class="letter-box">
+
+        <h2>💌 Letter To Amma & Daddy</h2>
+
+        <p>ప్రియమైన అమ్మా మరియు డాడీ,</p>
+
+        <p>
+            మా కోసం మీరు ఎన్నో త్యాగాలు చేశారు, ఎన్నో కష్టాలు పడ్డారు.
+            మా గురించి ఆలోచించని రోజు మీ జీవితంలో ఎప్పుడూ ఉండదు.
+            మా సంతోషం కోసం, మా భవిష్యత్తు కోసం మీరు చేసిన ప్రతి త్యాగం అమూల్యమైనది.
+        </p>
+
+        <p>
+            మీలాంటి తల్లిదండ్రులు మాకు ఉండటం మా జీవితంలో అతిపెద్ద అదృష్టం.
+            మా వయసులో ఉన్నవాళ్లు చాలామంది తమ తల్లిదండ్రులకు ఏదో ఒక విధంగా సహాయం చేస్తుంటారు,
+            కానీ మీరు మాత్రం ఇప్పటికీ మమ్మల్ని చిన్న పిల్లల్లా ప్రేమతో చూసుకుంటూ,
+            మా ప్రతి అవసరాన్ని గమనిస్తూ ఉంటారు. ఆ ప్రేమను, ఆ అనురాగాన్ని మాటల్లో చెప్పలేం.
+        </p>
+
+        <p>
+            దేవుడికి ముందుగానే అన్నీ తెలుసు. 
+            అందుకే మిమ్మల్ని మా తల్లిదండ్రులుగా ఎన్నుకుని మాకు ఇచ్చాడు. 
+            నిజంగా యేసయ్యకు హృదయపూర్వక కృతజ్ఞతలు, ఎందుకంటే మీలాంటి ప్రేమగల, 
+            మంచితనంతో నిండిన తల్లిదండ్రులను మాకు ఇచ్చాడు.
+        </p>
+
+        <p>
+           మా జీవితంలో ప్రతి విషయంలో ఎలా ఉండాలి, ఎలా మాట్లాడాలి, ఎలా ప్రవర్తించాలి, 
+           సమస్యలను ఎలా ఎదుర్కోవాలి, మనుషులను ఎలా గౌరవించాలి అనే విలువలను మీరు మాకు నేర్పించారు. 
+        </p>
+
+        <p>
+          అమ్మా, మేము ఈరోజు దేవునిలో నిలకడగా ఉండగలుగుతున్నామంటే, 
+          అది నీ కన్నీటి ప్రార్థనల ఫలితం. మా కోసం నువ్వు చేసిన ప్రతి ప్రార్థన, 
+          ప్రతి ఉపవాసం మమ్మల్ని ఈ స్థాయికి తీసుకువచ్చాయి.
+        </p>
+
+        <p>
+          డాడీ, జీవితంలో కష్టపడటం అంటే ఏమిటో, కుటుంబం కోసం బాధ్యత తీసుకోవడం అంటే ఏమిటో, 
+          నిజాయితీగా జీవించడం అంటే ఏమిటో మాకు చూపించిన వ్యక్తి మీరు. 
+          మీ కష్టం, మీ అంకితభావం మాకు ఎప్పటికీ స్ఫూర్తిగా నిలుస్తాయి.
+        </p>
+
+        <p>
+            మాకు మరో జన్మ వచ్చినా, మేము మళ్లీ మీకే పిల్లలుగా పుట్టాలని కోరుకుంటాము. 
+            ఎందుకంటే మీలాంటి తల్లిదండ్రులు ప్రపంచంలో ఎవరికైనా దొరకడం నిజంగా ఒక గొప్ప ఆశీర్వాదం.
+        </p>
+        <p>
+            అమ్మా & డాడీ ❤️
+            మేము మిమ్మల్ని మాటల్లో చెప్పలేనంతగా ప్రేమిస్తున్నాము.
+            HAPPY ANNIVERSARY! ❤️
+        </p>
+
+        <h3>ప్రేమతో,</h3>
+        <h4>పండు & నాని ❤️</h4>
+
+    </div>
+
+</section>
+    <!-- Footer -->
+    <footer>
+        <h2>❤️ Happy Anniversary ❤️</h2>
+        <p>Made with Love by Your Children</p>
+    </footer>
+<script>
+const slider = document.getElementById("slider");
+const overlay = document.getElementById("overlay");
+
+slider.addEventListener("input", () => {
+    overlay.style.width = slider.value + "%";
+});
+</script>
+</div>
+
+<script>
+function checkPassword() {
+
+    const password =
+        document.getElementById("passwordInput")
+        .value
+        .trim()
+        .toLowerCase();
+
+    if(
+        password === "i love you mayya" ||
+        password === "i love you laxmi" 
+    ) {
+
+        document.getElementById("lock-screen").style.display = "none";
+        document.getElementById("website-content").style.display = "block";
+
+    } else {
+
+        document.getElementById("error-msg").innerText =
+            "Oops! Try again ❤️";
+    }
+}
+</script>
+</body>
+</html>
